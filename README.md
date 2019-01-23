@@ -1,11 +1,15 @@
-# Docker Environment for EtherCIS
+## Docker Environment for EtherCIS
 
 Docker environment for [EtherCIS] (https://github.com/ethercis/ethercis), an open source platform compatible with the openEHR standard.
 
 ## How To Use
 
-* EtherCIS uses a RESTful API similar to the [Ehrscape API] (https://code4health.org/platform/open_interfaces_apis/ehrscape/ehrscape_api_reference).
-* The Docker image contains no data upon startup. Data can be imported into the application and Postgres database using the various queries described in the [Ehrscape API] (https://code4health.org/platform/open_interfaces_apis/ehrscape/ehrscape_api_reference).
+* EtherCIS uses a RESTful API similar to the [Ehrscape API]
+  (https://dev.ehrscape.com/reference.html#_electronic_health_record_apis).
+* The Docker image contains no data upon startup. Data can be imported into the
+  application and Postgres database using the various queries described in the
+  [Ehrscape API]
+  (https://dev.ehrscape.com/reference.html#_electronic_health_record_apis).
 * For more information please refer to the official [EtherCIS documentation] (https://github.com/ethercis/ethercis/tree/master/doc).
 
 ## Setup
