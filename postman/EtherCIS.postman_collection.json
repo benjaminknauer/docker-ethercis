@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "c020ad64-a25d-4669-ac44-dc8e736a90a6",
+		"name": "EtherCIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Session",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:8888/rest/v1/session?username=root&password=secret",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"rest",
+						"v1",
+						"session"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "root"
+						},
+						{
+							"key": "password",
+							"value": "secret"
+						}
+					]
+				},
+				"description": "Returns sessionId.\n\nProvide sessionId in header 'Ehr-Session' in all following request.\n\nE.g.: \nHEADERS\nEhr-Session: sessionId:172.18.0.3-root-1548259316330-1479471875-12"
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch EHR by subjectId and subjectNamespace",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ehr-Session",
+						"value": "sessionId:172.18.0.3-root-1548256881245-829239858-11",
+						"type": "text"
+					},
+					{
+						"key": "x-bypass-credential",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:8888/rest/v1/ehr/?subjectId=1&subjectNamespace=1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"rest",
+						"v1",
+						"ehr",
+						""
+					],
+					"query": [
+						{
+							"key": "subjectId",
+							"value": "1"
+						},
+						{
+							"key": "subjectNamespace",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE EHR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ehr-Session",
+						"value": "sessionId:172.18.0.3-root-1548256881245-829239858-11",
+						"type": "text"
+					},
+					{
+						"key": "Prefer",
+						"value": "return=representation",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:8888/rest/v1/ehr?subjectId=3&subjectNamespace=1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"rest",
+						"v1",
+						"ehr"
+					],
+					"query": [
+						{
+							"key": "subjectId",
+							"value": "3"
+						},
+						{
+							"key": "subjectNamespace",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch EHR by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ehr-Session",
+						"value": "sessionId:172.18.0.3-root-1548256881245-829239858-11",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:8888/rest/v1/ehr?ehrId=bf38becf-42d1-4623-b02d-d7c844feb825",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"rest",
+						"v1",
+						"ehr"
+					],
+					"query": [
+						{
+							"key": "ehrId",
+							"value": "bf38becf-42d1-4623-b02d-d7c844feb825"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
