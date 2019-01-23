@@ -179,6 +179,146 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Create Template",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ehr-Session",
+						"value": "sessionId:172.18.0.3-root-1548279512784-1642080368-2",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "127.0.0.1:8888/rest/v1/template",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"rest",
+						"v1",
+						"template"
+					],
+					"query": [
+						{
+							"key": "body",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Add .opt file in body/binary"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Template Ids",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ehr-Session",
+						"value": "sessionId:172.18.0.3-root-1548279512784-1642080368-2",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "127.0.0.1:8888/rest/v1/template",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"rest",
+						"v1",
+						"template"
+					],
+					"query": [
+						{
+							"key": "body",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Example for Template",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ehr-Session",
+						"value": "sessionId:172.18.0.3-root-1548279512784-1642080368-2",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:8888/rest/v1/template/400d77e0-07e5-4d0b-8693-7301406af1c1/example",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"rest",
+						"v1",
+						"template",
+						"400d77e0-07e5-4d0b-8693-7301406af1c1",
+						"example"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
