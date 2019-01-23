@@ -49,3 +49,19 @@ Instructions on how to deploy the Docker environment on an IBM Bluemix server ca
 
 * The EtherCIS platform is licensed under the Apache License. A copy of the license can be found in the [EtherCIS subfolder] (https://github.com/alessfg/docker-ethercis/tree/master/application/ethercis-1.1.0).
 * All other code is licensed under the MIT License.
+
+## Random Resources
+Create Templates:
+http://ckm.apperta.org/ckm/
+https://www.openehr.org/downloads/modellingtools
+
+
+## Notes
+* Create session: POST
+  127.0.0.1:8888/rest/v1/session?username=root&password=secret
+Returns sessionId.
+Provide sessionId in header 'Ehr-Session' in all following request.
+
+E.g.:
+HEADERS
+Ehr-Session: sessionId:172.18.0.3-root-1548259316330-1479471875-12
