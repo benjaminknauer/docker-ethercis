@@ -1,4 +1,4 @@
-FROM postgres:10.4
+FROM postgres:9.4
 
 MAINTAINER Alessandro Fael Garcia <alessfg@hotmail.com>, Shinji Kobayashi <skoba@moss.gr.jp>
 
@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 	flex \
 	gcc \
 	git \
-	postgresql-server-dev-10.4 \
+	postgresql-server-dev-9.4 \
 	make \
 # Install temporal tables extension
   && git clone https://github.com/arkhipov/temporal_tables \
@@ -35,7 +35,7 @@ RUN apt-get update && apt-get install -y \
 	flex \
 	gcc \
 	git \
-	postgresql-server-dev-10.4 \
+	postgresql-server-dev-9.4 \
 	make \
 	&& apt-get autoremove -y
 
