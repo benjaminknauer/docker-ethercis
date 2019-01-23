@@ -1,8 +1,8 @@
 FROM postgres:9.4
 
-MAINTAINER Alessandro Fael Garcia <alessfg@hotmail.com>, Shinji Kobayashi <skoba@moss.gr.jp>
+MAINTAINER Alessandro Fael Garcia <alessfg@hotmail.com>
 
-LABEL EtherCIS-Version="1.2.0" \
+LABEL EtherCIS-Version="1.1.0" \
       Description="Docker image for the EtherCIS database"
 
 # The following list of commands is executed in the same RUN block to
